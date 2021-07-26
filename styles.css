@@ -1,0 +1,31 @@
+#shapeDisplay {
+
+    width: 600px;
+    height: 600px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(125, 122, 128, 0.815);
+
+}
+
+
+
+
+
+ .Square {
+
+    background-color: black;
+
+}
+
+
+
+/*  box with border, all sides 
+
+no height no width, but est border
+
+keep all borders except bottom
+height = border height
+
+
+*/
