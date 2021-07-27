@@ -51,13 +51,12 @@ console.log({offset});
 /*
 Next steps
 
-conditional logic for area calcs✅
-btn clicks for new shapes✅
+
 
 - jquery offset for display canvas
 
 
-// - git commit: shape display test for square working, saving before draw function creation
+
 
 need bootstrap form w/ input fields 
 
@@ -80,29 +79,70 @@ class Shape  {
         this.height = Number(height);
         this.width = Number(width);
         this.shapeDiv = $(`<div class = ${this.name}> </div>`);
+       
+       
+       // this.position();
+        this.left = this.randoNumX();
+        this.top = this.randoNumY();
 
 
         $(this.shapeDiv).css({
 
+            //"display": inline-block,
             "height": `${this.height}px`,
-            "width": `${this.width}px`
+            "width": `${this.width}px`,
+            "top": `${this.top}px`,
+            "left": `${this.left}px`,
+            "float": none
+
+            // need to add top & left setting
+
+
 
         }) 
        
+        console.log("this top " +this.top);
+        console.log(this.left);
 
        
         this.area();
         this.perimeter();
-console.log(this.shapeDiv);
+        console.log(this.shapeDiv);
 
-        $(document.body).append(this.shapeDiv);
+        $(shapeDisplay).append(this.shapeDiv);
 
 
+        
+        
         
     }
     
     // positiional logic
     
+    //random num generator
+    randoNumX(){
+        let randoNumX = Math.floor(Math.random()*600);
+        console.log(`random number x: ${randoNumX}`);
+        return randoNumX;
+    }
+    randoNumY(){
+        let randoNumY = Math.floor(Math.random()*600);
+        console.log(`random number y: ${randoNumY}`);
+        return randoNumY;
+    }
+
+
+    
+    position(){
+
+        this.left = this.randoNumX()*-1;
+
+        this.top = this.randoNumY();
+
+        
+        //return this.top;
+
+    }
     /* function draw()
         top and left properties
 
@@ -134,8 +174,8 @@ console.log(this.shapeDiv);
 
         }
 
-        console.log(this.name);
-        console.log(`area: ${areaShape}`);
+        //console.log(this.name);
+        //console.log(`area: ${areaShape}`);
 
 
      }
@@ -168,7 +208,7 @@ console.log(this.shapeDiv);
             
         } 
             
-        console.log(this.name);
+        //console.log(this.name);
         console.log(`perimeter: ${perimeter}`);
 
      }
