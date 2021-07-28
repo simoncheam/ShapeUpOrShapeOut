@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shape Up Or Shape Out</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +13,7 @@
     <div class="container">
    
             <!-- Add A Shape Div -->
-            <div id="shapeInputDiv" class="p-2" >Add a Shape
+            <div id="shapeInputDiv" class="p-2" >Shape Up Or Shape Out
 
                 <!-- RECTANGLE -->
                 <div> 
@@ -76,6 +76,24 @@
             <div id="shapeDisplay">
 
             </div>
+            <!-- resultPanel Div -->
+            <div id="resultDisplay">
+                <ul class="list-group">
+                    <li class="list-group-item ">Instructions:
+                        <br>1. Add Shape  
+                        <br>2. Single Click Shape to Examine Properties
+                    <br> 3. Double Click Shape to Remove:</li>
+                    <li class="list-group-item" id="shapeName">Shape Name: </li>
+                    <li class="list-group-item" id="shapeWidth">Width [px]</li>
+                    <li class="list-group-item" id="shapeHeight">Height [px]</li>
+                    <li class="list-group-item"id="shapeRadius">Radius [px]</li>
+                    <li class="list-group-item"id="shapeArea">Area [px^2]</li>
+                    <li class="list-group-item"id="shapePerimeter">Perimeter [px]</li>
+                  </ul>
+
+            </div>
+
+
     
             <!-- end container -->
     </div>
