@@ -351,7 +351,7 @@ class Triangle extends Shape {
             "height": `0px`,
             "width": `0px`,
             "border-bottom": `${this.height}px solid transparent`,
-            "border-left": `${this.width}px solid rgba( 255, 0, 0, .5)`
+            "border-left": `${this.width}px solid rgba( 255, 255, 0, .5)`
 
         }) 
         console.log(`border-bottom ${this.height}`);
